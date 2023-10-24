@@ -1,4 +1,4 @@
-![Snake](https://miro.medium.com/v2/resize:fit:1000/0*H4UytM9X0vFAlVZF.jpg"Snake")
+![Snake](https://logodix.com/logo/833675.jpg)
 
 **Jour 1**
 
