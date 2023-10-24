@@ -1,4 +1,5 @@
-# Snake
+<p style='color:red; text-align:center; font-size:60px;'> Snake </p>
+
 
 ## Jour 1
 
