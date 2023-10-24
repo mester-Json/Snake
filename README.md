@@ -1,4 +1,4 @@
-#  <span style="color: red;">Snake</span>
+#  [color=##FF0000] Snack [/color
 
 
 ## Jour 1
