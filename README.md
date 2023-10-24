@@ -1,5 +1,4 @@
-<p style='color:red; text-align:center; font-size:60px;'> Snake </p>
-
+# `#0969DA` Snake
 
 ## Jour 1
 
