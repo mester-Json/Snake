@@ -1,5 +1,4 @@
-[center] Snake [/center]
-
+# Snake
 
 ## Jour 1
 
