@@ -1,4 +1,4 @@
-#  [color=##FF0000] Snack [/color]
+[center] Snake [/center]
 
 
 ## Jour 1
