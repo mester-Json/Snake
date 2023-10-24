@@ -1,4 +1,4 @@
-#  [color=##FF0000] Snack [/color
+#  [color=##FF0000] Snack [/color]
 
 
 ## Jour 1
