@@ -1,11 +1,12 @@
 # Snake
 
+##  Ajout pour plus tard 
 
-- [x] Design
-- [x] Mockups
-- [x] Development
-- [x] Unit testing
-- [ ] QA
-- [ ] Stage
-- [ ] Beta Testing
-- [ ] Production
+- [ ]   Possibilité de changer la couleur.
+- [ ]   Possibilité de se connecter.
+- [ ]   Possibilité de changer la difficulté.
+- [ ]   Rendu responsive
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
