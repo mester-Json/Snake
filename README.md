@@ -1,4 +1,4 @@
-`#0969DA` Snake
+# `Snake`
 
 ## Jour 1
 
