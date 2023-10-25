@@ -1,39 +1,208 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <title>Snake Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/assets/styles/style.css">
+    <link rel="shortcut icon" href="./public/assets/media/favicon.ico" type="image/x-icon">
+    <script src="./src/scripts/main.js" type="module"></script>
 </head>
-
 <body>
-    <div>
-        <section class="scorebare">
-            <a class="Score">
-                <p>
-                    Score
-                </p>
-            </a>
-            <a class="Dificulter">
-                <p>
-                    Dificulter
-                </p>
-            </a>
-            <i class="fa-solid fa-pause"></i>
-        </section>
-        <div class="box">
-            <div class="plateau">
-
+    <div class="pause-window hidden">
+        <div class="pause-menu">
+            <p>PAUSED</p>
+            <div class="btn-container">
+                <div class="btn orange-btn">
+                    <span>RESUME</span>
+                </div>
+                <div class="btn blue-btn">
+                    <span>RESTART</span>
+                </div>
+                <div class="btn blue-btn">
+                    <span>QUIT</span>
+                </div>
             </div>
         </div>
-        <script src="./index.js"></script>
     </div>
+    <div class="main-menu">
+        <div class="window">
+            <div class="headline">
+                <p>SNAKE GAME</p>
+            </div>
+            <div class="menu-content">
+                <div class="btn orange-btn">
+                    <span>START</span>
+                </div>
+                <div class="btn blue-btn difficulty-btn">
+                    <span>DIFFICULTY</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="difficulty-popup hidden">
+                    <div>
+                        <span class="dif-setting">Easy</span>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <span class="dif-setting">Normal</span>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <span class="dif-setting">Hard</span>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <span class="dif-setting">Very Hard</span>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                    <div>
+                        <span class="dif-setting">Nightmare</span>
+                        <p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <div class="btn square-btn">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Login</span>
+                    </div>
+                    <div class="btn square-btn">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Options</span>
+                    </div>
+                    <div class="btn square-btn">
+                        <i class="fa-solid fa-ranking-star"></i>
+                        <span>Score</span>
+                    </div>
+                </div>
+                <div class="btn blue-btn">
+                    <span>CREDITS</span>
+                </div>
+                <img class="snake-image" src="public/assets/media/snake_640.png" alt="Illustration of a green snake">
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="game hidden">
+            <div class="instructions window">
+                <div class="headline">
+                    <p>Instructions</p>
+                </div>
+                <div class="inner-window">
+                    <p>How to move the snake</p>
+                    <div class="hotkeys">
+                        <div></div>
+                        <div class="key">Z</div>
+                        <div></div>
+                        <div class="key">Q</div>
+                        <div class="key">S</div>
+                        <div class="key">D</div>
+                    </div>
+                    <p>You can pause the game by hitting the escape key or clicking the pause button</p>
+                    <div class="hotkeys">
+                        <div class="key">
+                            <span>Esc</span>
+                        </div>
+                        <div class="key pause-key">
+                            <div>
+                                <div class="white-bar"></div>
+                                <div class="white-bar"></div>
+                            </div>
+                            <i class="fa-solid fa-computer-mouse"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-window window">
+                <div class="headline">
+                    <div class="headline-content">
+                        <div class="current-score">
+                            <span>Score</span>
+                            <span>0</span>
+                        </div>
+                        <div class="current-difficulty">
+                            <span>Difficulty</span>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="pause-btn">
+                            <div>
+                                <div class="white-bar"></div>
+                                <div class="white-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-window">
+                    <div class="game-window">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="scoreboard window">
+                <div class="headline">
+                    <p>Scoreboard</p>
+                </div>
+                <div class="inner-window">
+                    <div class="user first-place">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user second-place">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user third-place">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                    <div class="user">
+                        <p class="user-pseudo">Théo</p>
+                        <p class="user-score">31215<span>pt</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
-
 </html>

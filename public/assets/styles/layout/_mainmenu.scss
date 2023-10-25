@@ -1,0 +1,116 @@
+.main-menu {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cherry Bomb One', 'sans-serif';
+
+    .headline {
+        background: #1F6C2A;
+        border-radius: 20px 20px 0px 0px;
+        padding: 45px 30px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .headline-content {
+            display: flex;
+            width: 100%;
+        }
+
+        &>p {
+            font-family: 'Cherry Bomb One';
+            font-size: 4rem;
+            background: linear-gradient(180deg, #FFBF85 40.13%, #FF7A00 52.52%);
+            font-weight: 700;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-text-stroke-width: 3px; 
+            -webkit-text-stroke-color: black; 
+        }
+    }
+
+    .menu-content {
+        position: relative;
+        background: url(../../../public/assets/media/main-menu-background.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 100px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 0px 20px 20px;
+        .btn-container {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .blue-btn {
+            position: relative;
+            i {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .snake-image {
+        position: absolute;
+        width: 270px;
+        bottom: -40px;
+        left: -80px;
+    }
+
+    .difficulty-popup {
+        background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+        box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+        border-radius: 30px;
+        padding: 10px;
+        position: absolute;
+        top: 241px;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &>div {
+            margin: 5px 0;
+            border-radius: 50px;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            span {
+                margin-right: 90px;
+                font-weight: 400;
+                font-size: 20px;
+                color: #FFFFFF;
+                text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            }
+
+            p, span {
+                display: flex;
+                align-items: center;
+            }
+            &:hover, &:hover span {
+                color: #FF7A00;
+                background-color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
