@@ -23,3 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
         key == movementKeys.right && console.log("right")
     }) */
 })
+
+
+// Sélectionnez le bouton "Start" par son ID
+const startButton = document.getElementById("start-button");
+
+// Sélectionnez la section de jeu par sa classe
+const gameSection = document.querySelector(".game");
+
+// Ajoutez un gestionnaire d'événement pour le clic sur le bouton
+startButton.addEventListener("click", () => {
+    // Supprimez la classe "hidden" pour afficher la section de jeu
+    gameSection.classList.remove("hidden");
+});
