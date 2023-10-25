@@ -10,7 +10,7 @@ main {
 }
 
 .window {
-  background: #73BF24;
+  background: #73bf24;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.45);
 }
@@ -28,14 +28,14 @@ main {
 }
 .pause-window .pause-menu {
   padding: 25px;
-  background: #1F6C2A;
-  border: 3px solid #19902B;
+  background: #1f6c2a;
+  border: 3px solid #19902b;
   border-radius: 20px;
 }
 .pause-window .pause-menu > p {
   font-weight: 400;
   font-size: 4rem;
-  color: #FF7A00;
+  color: #ff7a00;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   margin-bottom: 50px;
@@ -47,12 +47,16 @@ main {
 
 section.game {
   display: grid;
-  width: 90%;
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
   padding-top: 10%;
   grid-template-columns: 2fr 7fr 2fr;
   grid-gap: 20px;
+}
+@media (max-width: 1440px) {
+  section.game {
+    width: 880px;
+  }
 }
 section.game .headline {
   background: #1F6C2A;
@@ -99,6 +103,11 @@ section.game .inner-window {
 section.game .instructions {
   text-align: center;
 }
+@media (max-width: 1440px) {
+  section.game .instructions {
+    display: none;
+  }
+}
 section.game .instructions .inner-window {
   padding-top: 30px;
 }
@@ -123,6 +132,14 @@ section.game .game-window {
   width: 100%;
   aspect-ratio: 3/2;
   background: #BBEAC2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1440px) {
+  section.game .scoreboard {
+    display: none;
+  }
 }
 section.game .scoreboard .user {
   width: 100%;
@@ -156,9 +173,6 @@ section.game .scoreboard .third-place {
   justify-content: center;
   align-items: center;
   font-family: "Cherry Bomb One", "sans-serif";
-}
-.main-menu .main-menu.hidden {
-  display: none; /* Masquez le menu en ajoutant la classe "hidden" */
 }
 .main-menu .headline {
   background: #1f6c2a;
@@ -260,7 +274,7 @@ section.game .scoreboard .third-place {
 .pause-btn {
   width: 40px;
   height: 40px;
-  background-color: #E1720C;
+  background-color: #e1720c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: flex;
@@ -274,7 +288,7 @@ section.game .scoreboard .third-place {
 .pause-btn .white-bar {
   width: 5px;
   height: 16px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
   border-radius: 2px;
   margin: 2px;
@@ -298,19 +312,19 @@ section.game .scoreboard .third-place {
 }
 @keyframes shadowOnClick {
   0% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 0%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 0%), #e1720c;
   }
   25% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 5%, rgba(255, 255, 255, 0) 25%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 5%, rgba(255, 255, 255, 0) 25%), #e1720c;
   }
   50% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 8%, rgba(255, 255, 255, 0) 50%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 8%, rgba(255, 255, 255, 0) 50%), #e1720c;
   }
   75% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 15.78%, rgba(255, 255, 255, 0) 75%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 15.78%, rgba(255, 255, 255, 0) 75%), #e1720c;
   }
   100% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 15.78%, rgba(255, 255, 255, 0) 100%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 15.78%, rgba(255, 255, 255, 0) 100%), #e1720c;
   }
 }
 .pause-btn:hover {
@@ -339,11 +353,11 @@ section.game .scoreboard .third-place {
 }
 
 .blue-btn {
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
 }
 
 .orange-btn {
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #E1720C 0%, #ED9D53 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #e1720c 0%, #ed9d53 100%);
 }
 
 .square-btn {
@@ -354,7 +368,7 @@ section.game .scoreboard .third-place {
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
 }
 .square-btn i {
   font-size: 1.6rem;
