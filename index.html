@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="main-menu hidden">
+    <div class="main-menu">
         <div class="window">
             <div class="headline">
                 <p>SNAKE GAME</p>
@@ -103,6 +103,21 @@
                         <i class="fa-solid fa-ranking-star"></i>
                         <span>Score</span>
                     </div>
+                    <div class="options-popup hidden">
+                        <form>
+                            <div class="form-row">
+                                <label for="keyboard">Controls</label>
+                                <select name="keyboard" id="keyboard">
+                                    <option value="QWERTY">QWERTY</option>
+                                    <option value="AZERTY">AZERTY</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="btn btn-validate">OK</button>
+                                <button class="btn btn-cancel">CANCEL</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="btn blue-btn">
                     <span>CREDITS</span>
@@ -112,7 +127,7 @@
         </div>
     </div>
     <main>
-        <section class="game">
+        <section class="game hidden">
             <div class="instructions window">
                 <div class="headline">
                     <p>Instructions</p>
