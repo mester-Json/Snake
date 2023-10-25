@@ -213,6 +213,7 @@ section.game .scoreboard .third-place {
   border-radius: 0px 0px 20px 20px;
 }
 .main-menu .menu-content .btn-container {
+  position: relative;
   width: 300px;
   display: flex;
   justify-content: space-between;
@@ -269,6 +270,49 @@ section.game .scoreboard .third-place {
   color: #ff7a00;
   background-color: white;
   cursor: pointer;
+}
+.main-menu .options-popup {
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  padding: 10px;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+.main-menu .options-popup form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+  min-width: 350px;
+}
+.main-menu .options-popup form label {
+  font-size: 1.4rem;
+}
+.main-menu .options-popup form select {
+  border: 0;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  padding: 7px 15px;
+  color: white;
+}
+.main-menu .options-popup .form-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-menu .options-popup .form-row:last-child {
+  margin-top: auto;
 }
 
 .pause-btn {
@@ -377,6 +421,24 @@ section.game .scoreboard .third-place {
   font-size: 0.95rem;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.btn-validate {
+  width: 150px;
+  border: none;
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #25D33F 0%, #19902B 100%);
+  font-family: "Cherry Bomb One";
+  margin-bottom: 0;
+  font-size: 1.15rem;
+}
+
+.btn-cancel {
+  width: 150px;
+  border: none;
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #F83C24 0%, #911010 100%);
+  font-family: "Cherry Bomb One";
+  margin-bottom: 0;
+  font-size: 1.15rem;
 }
 
 .key {
