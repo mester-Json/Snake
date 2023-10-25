@@ -1,8 +1,11 @@
 "use strict";
 
+import { createBoard } from "./board.js";
+import { createFood } from "./food.js";
+
 let movementKeys = {
-    top: "z",
-    bottom: "s",
+    up: "z",
+    down: "s",
     left: "q",
     right: "d"
 }
@@ -14,11 +17,13 @@ const displayDifficultyPopup = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    createBoard();
+    createFood();
     document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup)
     /* window.addEventListener("keydown", (event) => {
         let key = event.key;
-        key == movementKeys.top ? console.log("top") :
-        key == movementKeys.bottom ? console.log("bottom") :
+        key == movementKeys.up ? console.log("up") :
+        key == movementKeys.down ? console.log("down") :
         key == movementKeys.left ? console.log("left") :
         key == movementKeys.right && console.log("right")
     }) */
@@ -39,10 +44,10 @@ startButton.addEventListener("click", () => {
 });
 
 
-// Dificulter 
-const difficulty = document.getElementById(".difficulty-popup");
+// Difficulté
+const difficulty = document.querySelector(".difficulty-popup");
 
-const difficultysetting = displayDifficultyPopup.querySelectorAll('.dif-setting');
+const difficultySetting = difficulty.querySelectorAll('.dif-setting');
 
 const difficultySpeed = {
     easy: 100,
@@ -52,13 +57,13 @@ const difficultySpeed = {
     nigthmare: 450,
 }
 
-difficultysetting.forEach(element => {
+difficultySetting.forEach(element => {
     element.addEventListener('click', (event) => {
         const selectDifficulty = event.target.getAttribute('data-difficulty');
     });
 });
 
-const start = document.getElementById('start-button');
+/* const start = document.getElementById('start-button');
 startButton.addEventListener('click', () => {
     const selectDifficulty =
-})
+}) */
