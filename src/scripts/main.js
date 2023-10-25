@@ -24,14 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }) */
 })
 
-
-
-
+// Start 
 const startButton = document.getElementById("start-button");
 
-
 const gameSection = document.querySelector(".game");
-
 
 const mainMenu = document.querySelector(".main-menu");
 
@@ -41,3 +37,28 @@ startButton.addEventListener("click", () => {
 
     mainMenu.classList.add("hidden");
 });
+
+
+// Dificulter 
+const difficulty = document.getElementById(".difficulty-popup");
+
+const difficultysetting = displayDifficultyPopup.querySelectorAll('.dif-setting');
+
+const difficultySpeed = {
+    easy: 100,
+    normale: 250,
+    hard: 300,
+    veryhard: 350,
+    nigthmare: 450,
+}
+
+difficultysetting.forEach(element => {
+    element.addEventListener('click', (event) => {
+        const selectDifficulty = event.target.getAttribute('data-difficulty');
+    });
+});
+
+const start = document.getElementById('start-button');
+startButton.addEventListener('click', () => {
+    const selectDifficulty =
+})

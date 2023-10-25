@@ -1,39 +1,59 @@
 .pause-btn {
     width: 40px;
     height: 40px;
-    background-color: #E1720C;
+    background-color: #e1720c;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
-    &>div {
+    & > div {
         display: flex;
     }
     .white-bar {
         width: 5px;
         height: 16px;
-        background: #FFFFFF;
+        background: #ffffff;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
         border-radius: 2px;
         margin: 2px;
     }
 
     @keyframes shaking {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(4deg); }
-        50% { transform: rotate(0eg); }
-        75% { transform: rotate(-4deg); }
-        100% { transform: rotate(0deg); }
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(4deg);
+        }
+        50% {
+            transform: rotate(0eg);
+        }
+        75% {
+            transform: rotate(-4deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 
     @keyframes shadowOnClick {
-        0% { background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 0%), #E1720C;}
-        25% { background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 5%, rgba(255, 255, 255, 0) 25%), #E1720C;}
-        50% { background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 8%, rgba(255, 255, 255, 0) 50%), #E1720C;}
-        75% { background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 15.78%, rgba(255, 255, 255, 0) 75%), #E1720C;}
-        100% { background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 15.78%, rgba(255, 255, 255, 0) 100%), #E1720C;}
+        0% {
+            background: radial-gradient(70% 70% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 0%), #e1720c;
+        }
+        25% {
+            background: radial-gradient(70% 70% at 50% 50%, #ffffff 5%, rgba(255, 255, 255, 0) 25%), #e1720c;
+        }
+        50% {
+            background: radial-gradient(70% 70% at 50% 50%, #ffffff 8%, rgba(255, 255, 255, 0) 50%), #e1720c;
+        }
+        75% {
+            background: radial-gradient(70% 70% at 50% 50%, #ffffff 15.78%, rgba(255, 255, 255, 0) 75%), #e1720c;
+        }
+        100% {
+            background: radial-gradient(70% 70% at 50% 50%, #ffffff 15.78%, rgba(255, 255, 255, 0) 100%), #e1720c;
+        }
     }
 
     &:hover {
@@ -64,11 +84,11 @@
 }
 
 .blue-btn {
-    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%)
+    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
 }
 
 .orange-btn {
-    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #E1720C 0%, #ED9D53 100%);
+    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #e1720c 0%, #ed9d53 100%);
 }
 
 .square-btn {
@@ -79,7 +99,7 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 20px;
-    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
 
     i {
         font-size: 1.6rem;
