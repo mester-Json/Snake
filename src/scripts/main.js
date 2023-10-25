@@ -25,14 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
+
 // Sélectionnez le bouton "Start" par son ID
 const startButton = document.getElementById("start-button");
 
 // Sélectionnez la section de jeu par sa classe
 const gameSection = document.querySelector(".game");
 
-// Ajoutez un gestionnaire d'événement pour le clic sur le bouton
+// Sélectionnez le menu "Start" par sa classe
+const mainMenu = document.querySelector(".main-menu");
+
+// Ajoutez un gestionnaire d'événement pour le clic sur le bouton "Start"
 startButton.addEventListener("click", () => {
-    // Supprimez la classe "hidden" pour afficher la section de jeu
+    // Supprimez la classe "hidden" de la section de jeu pour l'afficher
     gameSection.classList.remove("hidden");
+
+    // Ajoutez la classe "hidden" au menu "Start" pour le masquer
+    mainMenu.classList.add("hidden");
 });
