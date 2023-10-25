@@ -1,26 +1,12 @@
-snakeGame.getBlockWidth = () => {
-    return blockWidth;
+import { snakeGame } from "./variables.js";
+
+
+const createBoard = () => {
+    const board = document.querySelector("#board");
+    const board_ctx = board.getContext("2d");
+
+    board_ctx.canvas.height = snakeGame.BOARD_HEIGHT;
+    board_ctx.canvas.width = snakeGame.BOARD_WIDTH;
 }
 
-snakeGame.getBlockHeight = () => {
-    return blockHeight;
-}
-
-const createPlayingField = () => {
-    fieldGrid = [];
-    numfieldCols = fieldWidth / getBlockWidth;
-    numfieldRows = fieldHeight / blockHeight;
-
-    for (let row = 0; row < numBoardRows; row++) {
-        me.grid[row] = [];
-        for (let col = 0; col < numBoardCols; col++) {
-            if (col === 0 || row === 0 || col === (numBoardCols-1) || row === (numBoardRows-1)) {
-                me.grid[row][col] = 1;
-            } else {
-                me.grid[row][col] = 0;
-            }
-        }
-    }
-}
-
-export {createPlayingField}
+export {createBoard}
