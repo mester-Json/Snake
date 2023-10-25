@@ -1,5 +1,3 @@
-![Snake](https://logodix.com/logo/833675.jpg)
-
 ![](https://static.keygames.com/2/114942/100807/672x448/snake-challenge.webp)
 
 # Jour 1
