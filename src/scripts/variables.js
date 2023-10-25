@@ -1,6 +1,14 @@
+const cell = {
+    height: 15,
+    width: 15
+}
+
 let snakeGame = {
-    MAX_BOARD_ROWS: 100,
-    MAX_BOARD_COLS: 150,
+    BOARD_WIDTH: cell.height * 53,
+    BOARD_HEIGHT: cell.height * 35,
     blockWidth: 15,
     blockHeight: 15,
 }
+
+
+export {cell, snakeGame}
