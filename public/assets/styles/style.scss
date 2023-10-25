@@ -1,0 +1,13 @@
+@import './layout/layout';
+@import './layout/game';
+@import './layout/pausemenu';
+@import './layout/mainmenu';
+@import './components/buttons';
+@import './components/icons';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
