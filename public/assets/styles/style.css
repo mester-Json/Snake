@@ -157,8 +157,11 @@ section.game .scoreboard .third-place {
   align-items: center;
   font-family: "Cherry Bomb One", "sans-serif";
 }
+.main-menu .main-menu.hidden {
+  display: none; /* Masquez le menu en ajoutant la classe "hidden" */
+}
 .main-menu .headline {
-  background: #1F6C2A;
+  background: #1f6c2a;
   border-radius: 20px 20px 0px 0px;
   padding: 45px 30px;
   height: 60px;
@@ -173,7 +176,7 @@ section.game .scoreboard .third-place {
 .main-menu .headline > p {
   font-family: "Cherry Bomb One";
   font-size: 4rem;
-  background: linear-gradient(180deg, #FFBF85 40.13%, #FF7A00 52.52%);
+  background: linear-gradient(180deg, #ffbf85 40.13%, #ff7a00 52.52%);
   font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -216,7 +219,7 @@ section.game .scoreboard .third-place {
   left: -80px;
 }
 .main-menu .difficulty-popup {
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
   border-radius: 30px;
   padding: 10px;
@@ -240,15 +243,16 @@ section.game .scoreboard .third-place {
   margin-right: 90px;
   font-weight: 400;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.main-menu .difficulty-popup > div p, .main-menu .difficulty-popup > div span {
+.main-menu .difficulty-popup > div p,
+.main-menu .difficulty-popup > div span {
   display: flex;
   align-items: center;
 }
 .main-menu .difficulty-popup > div:hover, .main-menu .difficulty-popup > div:hover span {
-  color: #FF7A00;
+  color: #ff7a00;
   background-color: white;
   cursor: pointer;
 }
@@ -409,6 +413,7 @@ section.game .scoreboard .third-place {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 /*# sourceMappingURL=style.css.map */
