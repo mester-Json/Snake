@@ -6,13 +6,6 @@ import { createBoard } from "./board.js";
 import { drawFood, randomFoodPosition } from "./food.js";
 import { createSnake, moveSnake } from "./snake.js";
 
-let movementKeys = {
-    top: "z",
-    bottom: "s",
-    left: "q",
-    right: "d"
-}
-
 const displayDifficultyPopup = () => {
     const popup = document.querySelector(".difficulty-popup");
     popup.classList.toggle("hidden");
