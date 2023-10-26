@@ -1,3 +1,5 @@
+import { snakeGame, cell } from "./variables.js";
+
 const createBoard = () => {
     const board = document.querySelector("#board");
     const board_ctx = board.getContext("2d");
