@@ -5,6 +5,8 @@ import { createBoard } from "./board.js";
 import { drawFood, randomFoodPosition, createFood } from "./food.js"; // Ajoutez createFood ici
 import { createSnake, moveSnake } from "./snake.js";
 
+const food = {}; 
+
 const displayDifficultyPopup = () => {
     const popup = document.querySelector(".difficulty-popup");
     popup.classList.toggle("hidden");
@@ -53,12 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // Ne supprimez pas cette fonction !!!
 function startGame() {
         createBoard();
-        createSnake();
-    createFood();
-
+    createBoard();
     food.posX = randomFoodPosition("posX");
     food.posY = randomFoodPosition("posY");
     drawFood(food);
+    createSnake();
 }
 startGame();
 
