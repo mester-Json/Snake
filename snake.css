@@ -1,0 +1,27 @@
+
+.snake {
+    background-color: #00A400; 
+    width: 20px;
+    height: 20px;
+    border: 1px solid #004000; 
+    position: absolute;
+    z-index: 1;
+}
+
+.snake-head {
+    background-color: #00A400; 
+    width: 20px; 
+    height: 20px;
+    border: 1px solid #004000; 
+    position: absolute;
+    z-index: 2; 
+}
+
+.food {
+    background-color: #FF0000; 
+    width: 20px; 
+    height: 20px; 
+    border: 1px solid #800000;
+    position: absolute;
+    z-index: 1; 
+}

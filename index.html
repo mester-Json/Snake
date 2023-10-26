@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./public/assets/styles/style.css">
     <link rel="shortcut icon" href="./public/assets/media/favicon.ico" type="image/x-icon">
     <script src="./src/scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="snake.css">
 </head>
 
 <body>
@@ -42,10 +43,6 @@
             </div>
             <div class="menu-content">
                 <div class="btn orange-btn" id="start-button">
-<<<<<<< HEAD
-
-=======
->>>>>>> ba17256127838a84424951b043aa0a904beafa09
                     <span>START</span>
                 </div>
                 <div class="btn blue-btn difficulty-btn" id="difficulty">
@@ -116,7 +113,7 @@
         </div>
     </div>
     <main>
-        <section class="game hidden">
+        <section class="game hidden" id="game-section">
             <div class="instructions window">
                 <div class="headline">
                     <p>Instructions</p>
@@ -168,50 +165,51 @@
                     </div>
                 </div>
                 <div class="inner-window">
-                    <div class="game-window">
+                    <div class="inner-window">
+                        <div class="game-window">
+                            <div class="snake" id="snakeHead">
 
+                            </div>
+                            <div class="food" id="food">
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="scoreboard window">
-                <div class="headline">
-                    <p>Scoreboard</p>
-                </div>
-                <div class="inner-window">
-                    <div class="user first-place">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
+                    <div class="scoreboard window">
+                        <div class="headline">
+                            <p>Scoreboard</p>
+                        </div>
+                        <div class="inner-window">
+                            <div class="user first-place">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                            <div class="user second-place">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                            <div class="user third-place">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                            <div class="user">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                            <div class="user">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                            <div class="user">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                            <div class="user">
+                                <p class="user-pseudo">Théo</p>
+                                <p class="user-score">31215<span>pt</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="user second-place">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                    <div class="user third-place">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                    <div class="user">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                    <div class="user">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                    <div class="user">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                    <div class="user">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                    <div class="user">
-                        <p class="user-pseudo">Théo</p>
-                        <p class="user-score">31215<span>pt</span></p>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 </body>

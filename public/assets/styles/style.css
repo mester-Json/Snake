@@ -409,6 +409,7 @@ section.game .scoreboard .third-place {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 /*# sourceMappingURL=style.css.map */
