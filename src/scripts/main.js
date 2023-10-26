@@ -6,10 +6,6 @@ import { createBoard } from "./board.js";
 import { drawFood, randomFoodPosition } from "./food.js";
 import { createSnake, moveSnake } from "./snake.js";
 
-
-import { createBoard } from "./board.js";
-import { createFood } from "./food.js";
-
 let movementKeys = {
     top: "z",
     bottom: "s",
