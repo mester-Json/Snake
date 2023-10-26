@@ -129,8 +129,8 @@ section.game .instructions .hotkeys:last-child {
   grid-gap: 40px;
 }
 section.game .game-window {
-  width: 100%;
-  aspect-ratio: 3/2;
+  width: fit-content;
+  height: fit-content;
   background: #BBEAC2;
   display: flex;
   justify-content: center;
