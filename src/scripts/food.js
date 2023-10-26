@@ -10,7 +10,7 @@ const createFood = () => {
     const foodImg = new Image();
     foodImg.width = cell.width;
     foodImg.height = cell.height;
-    console.log(foodImg);
+
     const ctx = document.querySelector("#board").getContext("2d");
 
     foodImg.addEventListener("load", () => {
