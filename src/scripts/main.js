@@ -1,11 +1,8 @@
 "use strict";
 
-import { createBoard } from "./board.js";
-import { createFood } from "./food.js";
-
 let movementKeys = {
-    up: "z",
-    down: "s",
+    top: "z",
+    bottom: "s",
     left: "q",
     right: "d"
 }
@@ -17,13 +14,11 @@ const displayDifficultyPopup = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    createBoard();
-    createFood();
     document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup)
     /* window.addEventListener("keydown", (event) => {
         let key = event.key;
-        key == movementKeys.up ? console.log("up") :
-        key == movementKeys.down ? console.log("down") :
+        key == movementKeys.top ? console.log("top") :
+        key == movementKeys.bottom ? console.log("bottom") :
         key == movementKeys.left ? console.log("left") :
         key == movementKeys.right && console.log("right")
     }) */
@@ -39,15 +34,8 @@ startButton.addEventListener("click", () => {
     gameSection.classList.remove("hidden");
     mainMenu.classList.add("hidden");
 
-<<<<<<< HEAD
     startGame();
 });
-=======
-// Difficulté
-const difficulty = document.querySelector(".difficulty-popup");
-
-const difficultySetting = difficulty.querySelectorAll('.dif-setting');
->>>>>>> 149881c4d2fc25e74c14c58b5e4e2ab5b9f2ed40
 
 const difficulty = document.querySelector(".difficulty-popup");
 const difficultySetting = difficulty.querySelectorAll('.dif-setting');
@@ -59,7 +47,6 @@ const difficultySpeed = {
     nigthmare: 450,
 }
 
-<<<<<<< HEAD
 let score = 0;
 let snakeX = 0;
 let snakeY = 0;
@@ -99,14 +86,8 @@ function startGame() {
                 if (direction !== 'left') direction = 'right';
                 break;
         }
-=======
-difficultySetting.forEach(element => {
-    element.addEventListener('click', (event) => {
-        const selectDifficulty = event.target.getAttribute('data-difficulty');
->>>>>>> 149881c4d2fc25e74c14c58b5e4e2ab5b9f2ed40
     });
 
-<<<<<<< HEAD
     function moveSnake() {
         if (direction === 'up') snakeY -= 20;
         if (direction === 'down') snakeY += 20;
@@ -131,9 +112,3 @@ difficultySetting.forEach(element => {
     updateFoodPosition();
     moveSnake();
 }
-=======
-/* const start = document.getElementById('start-button');
-startButton.addEventListener('click', () => {
-    const selectDifficulty =
-}) */
->>>>>>> 149881c4d2fc25e74c14c58b5e4e2ab5b9f2ed40

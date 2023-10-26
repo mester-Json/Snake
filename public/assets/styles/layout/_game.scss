@@ -1,9 +1,7 @@
 section.game {
     display: grid;
-    width: 1440px;
-    @include for-size(desktop-lg, down) {
-        width: 880px;
-    }
+    width: 90%;
+    max-width: 1440px;
     margin: 0 auto;
     padding-top: 10%;
     grid-template-columns: 2fr 7fr 2fr;
@@ -59,10 +57,6 @@ section.game {
     .instructions {
         text-align: center;
 
-        @include for-size(desktop-lg, down) {
-            display: none;
-        }
-
         .inner-window {
             padding-top: 30px;
             p {
@@ -90,20 +84,10 @@ section.game {
     .game-window {
         width: 100%;
         aspect-ratio: 3 / 2;
-<<<<<<< HEAD
         background: #bbeac2;
-=======
-        background: #BBEAC2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
->>>>>>> 149881c4d2fc25e74c14c58b5e4e2ab5b9f2ed40
     }
 
     .scoreboard {
-        @include for-size(desktop-lg, down) {
-            display: none;
-        }
         .user {
             width: 100%;
             padding: 10px;
