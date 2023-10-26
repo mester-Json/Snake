@@ -52,9 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Ne supprimez pas cette fonction !!!
 function startGame() {
+        createBoard();
         createSnake();
     createFood();
-    createBoard();
+
     food.posX = randomFoodPosition("posX");
     food.posY = randomFoodPosition("posY");
     drawFood(food);
