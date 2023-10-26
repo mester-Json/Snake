@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     createBoard();
-    food.posX = randomFoodPosition("posX");
-    food.posY = randomFoodPosition("posY");
+
     drawFood(food);
     createSnake();
 
@@ -56,8 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function startGame() {
         createBoard();
     createBoard();
-    food.posX = randomFoodPosition("posX");
-    food.posY = randomFoodPosition("posY");
+
     drawFood(food);
     createSnake();
 }
