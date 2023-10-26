@@ -53,13 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainMenu = document.querySelector(".main-menu");
 
 
-    startButton.addEventListener("click" () {
+    startButton.addEventListener("click", () => {
         gameSection.classList.remove("hidden");
         mainMenu.classList.add("hidden");
-
-
     });
-
 })
 
 
