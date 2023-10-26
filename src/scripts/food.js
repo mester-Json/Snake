@@ -7,11 +7,9 @@ const drawFood = () => {
     const foodImg = new Image();
     foodImg.width = cell.width;
     foodImg.height = cell.height;
-<<<<<<< HEAD
-=======
+
 
     const ctx = document.querySelector("#board").getContext("2d");
->>>>>>> 20413d1c657eada8c3c2208d033d34bbc5a68583
 
     foodImg.addEventListener("load", () => {
         board_ctx.imageSmoothingQuality = "high";
