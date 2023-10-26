@@ -4,8 +4,8 @@ const createFood = () => {
     let maxPosY = snakeGame.BOARD_HEIGHT;
     let maxPosX = snakeGame.BOARD_WIDTH;
 
-    let foodPosY = Math.floor(Math.random() * maxPosY / cell.height) * cell.height - cell.height;
-    let foodPosX = Math.floor(Math.random() * maxPosX / cell.width) * cell.width - cell.width;
+    let foodPosY = Math.floor(Math.random() * (maxPosY / cell.height - 1)) * cell.height;
+    let foodPosX = Math.floor(Math.random() * (maxPosX / cell.width - 1)) * cell.width;
 
     const foodImg = new Image();
     foodImg.width = cell.width;
