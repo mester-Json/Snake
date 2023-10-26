@@ -1,4 +1,4 @@
-![https://mester-json.github.io/Snack/](https://static.keygames.com/2/114942/100807/672x448/snake-challenge.webp)
+![](https://static.keygames.com/2/114942/100807/672x448/snake-challenge.webp)
 
 # Jour 1
 
@@ -11,6 +11,12 @@
 > Hier, Jérôme a fait beaucoup de CSS et d'HTML. C'est grâce à lui que nous avons un site propre. <br> " Grand Merci A Toi " <br> Aujourd'hui, nous avons réfléchi à la manière dont nous allons procéder pour afficher les commentaires lorsque les utilisateurs arrivent sur notre page d'accueil. Nous avons beaucoup réfléchi à la façon dont nous pourrions le faire, par exemple, si nous devons recréer une page lorsqu'on appuie sur le bouton "Start". Nous avons opté pour la disparition du menu lorsqu'on appuie sur ce bouton ...
 
 ----------
+
+## Liens 
+
+> https://mester-json.github.io/Snack/
+
+-----------------------
 
 ###  Ajout pour plus tard 
 
