@@ -1,10 +1,22 @@
 "use strict";
 
+<<<<<<< HEAD
 import { movementKeys, food } from './variables.js'
 import { createBoard } from "./board.js";
 import { drawFood, randomFoodPosition } from "./food.js";
 import { createSnake, moveSnake } from "./snake.js";
 
+=======
+import { createBoard } from "./board.js";
+import { createFood } from "./food.js";
+
+let movementKeys = {
+    top: "z",
+    bottom: "s",
+    left: "q",
+    right: "d"
+}
+>>>>>>> 20413d1c657eada8c3c2208d033d34bbc5a68583
 
 const displayDifficultyPopup = () => {
     const popup = document.querySelector(".difficulty-popup");
@@ -13,6 +25,7 @@ const displayDifficultyPopup = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+<<<<<<< HEAD
 
     const pause = document.querySelector(".pause-window");
     const pauseBtn = document.querySelector(".pause-btn");
@@ -25,6 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
         pause.classList.toggle("hidden");
     })
 
+=======
+    createBoard();
+    createFood();
+>>>>>>> 20413d1c657eada8c3c2208d033d34bbc5a68583
     document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup)
 
     window.addEventListener("keydown", (event) => {
