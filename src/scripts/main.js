@@ -1,5 +1,8 @@
 "use strict";
 
+import { createBoard } from "./board.js";
+import { createFood } from "./food.js";
+
 let movementKeys = {
     top: "z",
     bottom: "s",
@@ -14,6 +17,8 @@ const displayDifficultyPopup = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    createBoard();
+    createFood();
     document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup)
     /* window.addEventListener("keydown", (event) => {
         let key = event.key;
