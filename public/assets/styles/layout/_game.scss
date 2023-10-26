@@ -82,8 +82,8 @@ section.game {
     }
 
     .game-window {
-        width: 100%;
-        aspect-ratio: 3 / 2;
+        width: fit-content;
+        height: fit-content;
         background: #bbeac2;
     }
 

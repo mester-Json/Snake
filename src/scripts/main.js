@@ -1,11 +1,10 @@
 "use strict";
 
-let movementKeys = {
-    top: "z",
-    bottom: "s",
-    left: "q",
-    right: "d"
-}
+import { movementKeys, food } from './variables.js'
+import { createBoard } from "./board.js";
+import { drawFood, randomFoodPosition } from "./food.js";
+import { createSnake, moveSnake } from "./snake.js";
+
 
 const displayDifficultyPopup = () => {
     const popup = document.querySelector(".difficulty-popup");
@@ -14,101 +13,68 @@ const displayDifficultyPopup = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const pause = document.querySelector(".pause-window");
+    const pauseBtn = document.querySelector(".pause-btn");
+    pauseBtn.addEventListener("click", () => {
+        pause.classList.toggle("hidden");
+    })
+
+    const resumeBtn = document.querySelector(".resume-btn");
+    resumeBtn.addEventListener("click", () => {
+        pause.classList.toggle("hidden");
+    })
+
     document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup)
-    /* window.addEventListener("keydown", (event) => {
+
+    window.addEventListener("keydown", (event) => {
         let key = event.key;
-        key == movementKeys.top ? console.log("top") :
-        key == movementKeys.bottom ? console.log("bottom") :
-        key == movementKeys.left ? console.log("left") :
-        key == movementKeys.right && console.log("right")
-    }) */
-})
-
-const startButton = document.getElementById("start-button");
-const gameSection = document.querySelector(".game");
-const mainMenu = document.querySelector(".main-menu");
-const snakeHead = document.querySelector('.snake');
+        if (key == movementKeys.top) moveSnake("up");
+        if (key == movementKeys.bottom) moveSnake("down");
+        if (key == movementKeys.left) moveSnake("left");
+        if (key == movementKeys.right) moveSnake("right");
+    })
 
 
-startButton.addEventListener("click", () => {
-    gameSection.classList.remove("hidden");
-    mainMenu.classList.add("hidden");
+    const startButton = document.getElementById("start-button");
+    const gameSection = document.querySelector(".game");
+    const mainMenu = document.querySelector(".main-menu");
 
-    startGame();
-});
 
-const difficulty = document.querySelector(".difficulty-popup");
-const difficultySetting = difficulty.querySelectorAll('.dif-setting');
-const difficultySpeed = {
-    easy: 100,
-    normale: 250,
-    hard: 300,
-    veryhard: 350,
-    nigthmare: 450,
-}
+    startButton.addEventListener("click", function () {
+        gameSection.classList.remove("hidden");
+        mainMenu.classList.add("hidden");
 
-let score = 0;
-let snakeX = 0;
-let snakeY = 0;
-let foodX = 0;
-let foodY = 0;
-let direction = 'right';
 
-function randomPosition() {
-    return Math.floor(Math.random() * 15) * 20;
-}
-
-function updateFoodPosition() {
-    foodX = randomPosition();
-    foodY = randomPosition();
-    food.style.left = foodX + 'px';
-    food.style.top = foodY + 'px';
-}
-
-function updateScore() {
-    score++;
-    document.getElementById('score').textContent = 'Score: ' + score;
-}
-
-function startGame() {
-    document.addEventListener('keydown', (event) => {
-        switch (event.key) {
-            case 'ArrowUp':
-                if (direction !== 'down') direction = 'up';
-                break;
-            case 'ArrowDown':
-                if (direction !== 'up') direction = 'down';
-                break;
-            case 'ArrowLeft':
-                if (direction !== 'right') direction = 'left';
-                break;
-            case 'ArrowRight':
-                if (direction !== 'left') direction = 'right';
-                break;
-        }
     });
 
-    function moveSnake() {
-        if (direction === 'up') snakeY -= 20;
-        if (direction === 'down') snakeY += 20;
-        if (direction === 'left') snakeX -= 20;
-        if (direction === 'right') snakeX += 20;
+})
 
-        snakeHead.style.left = snakeX + 'px';
-        snakeHead.style.top = snakeY + 'px';
 
-        if (snakeX === foodX && snakeY === foodY) {
-            updateScore();
-            updateFoodPosition();
-        }
+// Pas suprimer cette  function !!!!
 
-        if (snakeX < 0 || snakeX >= 300 || snakeY < 0 || snakeY >= 300) {
-            alert('Game Over! Your score: ' + score);
-        } else {
-            setTimeout(moveSnake, difficultySpeed.easy);
-        }
-    }
+function startGame() {
 
-    updateFoodPosition();
-    moveSnake();
+
+    createBoard();
+    food.posX = randomFoodPosition("posX");
+    food.posY = randomFoodPosition("posY");
+    console.log(food.posY)
+    drawFood(food);
+    createSnake();
 }
+startGame();
+
+
+function gameOver() {
+    alert('GAME OVER');
+    const board = document.querySelector("#board");
+    const board_ctx = board.getContext("2d");
+    const mainMenu = document.querySelector(".main-menu");
+    const gameSection = document.querySelector(".game");
+    gameSection.classList.toggle("hidden");
+    mainMenu.classList.toggle("hidden");
+    board_ctx.clearRect(0, 0, board_ctx.canvas.width, board_ctx.canvas.height);
+}
+
+export { gameOver }

@@ -1,25 +1,49 @@
-import {cell, snakeGame} from "./variables.js"
+import { cell, food, snake } from "./variables.js"
 
-const createFood = () => {
-    let maxPosY = snakeGame.BOARD_HEIGHT;
-    let maxPosX = snakeGame.BOARD_WIDTH;
-
-    let foodPosY = Math.floor(Math.random() * (maxPosY / cell.height - 1)) * cell.height;
-    let foodPosX = Math.floor(Math.random() * (maxPosX / cell.width - 1)) * cell.width;
+const drawFood = () => {
+    const board = document.querySelector("#board");
+    const board_ctx = board.getContext("2d");
 
     const foodImg = new Image();
     foodImg.width = cell.width;
     foodImg.height = cell.height;
-    console.log(foodImg);
-    const ctx = document.querySelector("#board").getContext("2d");
 
     foodImg.addEventListener("load", () => {
-        ctx.imageSmoothingQuality = "high";
-        ctx.drawImage(foodImg, foodPosX, foodPosY, cell.width, cell.height);
-        },
+        board_ctx.imageSmoothingQuality = "high";
+        board_ctx.drawImage(foodImg, food.posX, food.posY, cell.width, cell.height);
+    },
         false,
     );
-    foodImg.src = "/3WAcademy/JSAVANCE/SnakeGame/Snack/public/assets/media/apple.png";
+
+    foodImg.src = "./public/assets/media/apple.png";
 }
 
-export {createFood}
+const randomFoodPosition = (pos) => {
+    const board = document.querySelector("#board");
+    const board_ctx = board.getContext("2d");
+    let maxPosX = board_ctx.canvas.width;
+    let maxPosY = board_ctx.canvas.height;
+
+
+    if (pos == 'posX') {
+        let foodPosX;
+        do {
+            foodPosX = Math.floor(Math.random() * (maxPosX / cell.width - 1)) * cell.width;
+        } while (foodPosX == snake.posX);
+
+        return foodPosX
+    }
+    if (pos == 'posY') {
+        let foodPosY;
+
+        do {
+            foodPosY = Math.floor(Math.random() * (maxPosY / cell.height - 1)) * cell.height;
+        } while (foodPosY == snake.posY);
+
+        return foodPosY
+    }
+    /* return [Math.floor(Math.random() * ((cell.width * gridSize) + 1)), Math.floor(Math.
+        random() * ((cell.height * gridSize) + 1))]; */
+};
+
+export { drawFood, randomFoodPosition };

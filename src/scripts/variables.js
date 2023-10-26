@@ -1,14 +1,33 @@
 const cell = {
-    height: 15,
-    width: 15
+    height: 34,
+    width: 34
+}
+
+let movementKeys = {
+    top: "z",
+    bottom: "s",
+    left: "q",
+    right: "d"
+}
+
+let food = {
+    posX: 0,
+    posY: 0
 }
 
 let snakeGame = {
-    BOARD_WIDTH: cell.height * 53,
-    BOARD_HEIGHT: cell.height * 35,
-    blockWidth: 15,
-    blockHeight: 15,
+    MAX_BOARD_WIDTH: 850,
+    MAX_BOARD_HEIGHT: 550,
+}
+
+let snake = {
+    posX: 0,
+    posY: 0,
+    size: 0,
+    speedX: 0,
+    speedY: 0,
+    tail: []
 }
 
 
-export {cell, snakeGame}
+export { cell, snakeGame, movementKeys, food, snake }

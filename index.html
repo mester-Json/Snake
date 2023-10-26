@@ -24,13 +24,13 @@
         <div class="pause-menu">
             <p>PAUSED</p>
             <div class="btn-container">
-                <div class="btn orange-btn">
+                <div class="btn orange-btn resume-btn">
                     <span>RESUME</span>
                 </div>
-                <div class="btn blue-btn">
+                <div class="btn blue-btn restart-btn">
                     <span>RESTART</span>
                 </div>
-                <div class="btn blue-btn">
+                <div class="btn blue-btn quit-btn">
                     <span>QUIT</span>
                 </div>
             </div>
@@ -163,7 +163,7 @@
                     <div class="headline-content">
                         <div class="current-score">
                             <span>Score</span>
-                            <span>0</span>
+                            <span id="score-value">0</span>
                         </div>
                         <div class="current-difficulty">
                             <span>Difficulty</span>
@@ -182,7 +182,7 @@
                 <div class="inner-window">
                     <div class="game-window">
                         <canvas id="board">
-                                
+
                         </canvas>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                 <div class="headline">
                     <p>Scoreboard</p>
                 </div>
-                <div class="inner-window">
+                <div class="inner-window" id="high-score">
                     <div class="user first-place">
                         <p class="user-pseudo">Théo</p>
                         <p class="user-score">31215<span>pt</span></p>
