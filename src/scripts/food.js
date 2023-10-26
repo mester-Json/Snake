@@ -1,5 +1,9 @@
 import { cell, snake } from "./variables.js"
 
+function createFood() {
+
+}
+
 const drawFood = () => {
     const board = document.querySelector("#board");
     const board_ctx = board.getContext("2d");
@@ -49,4 +53,4 @@ const randomFoodPosition = (pos) => {
         random() * ((cell.height * gridSize) + 1))]; */
 };
 
-export { drawFood, randomFoodPosition };
+export { createFood, drawFood, randomFoodPosition };
