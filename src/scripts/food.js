@@ -1,4 +1,4 @@
-import { cell, food, snake } from "./variables.js"
+import { cell, snake } from "./variables.js"
 
 const drawFood = () => {
     const board = document.querySelector("#board");
