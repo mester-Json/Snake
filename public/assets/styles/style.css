@@ -10,7 +10,7 @@ main {
 }
 
 .window {
-  background: #73BF24;
+  background: #73bf24;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.45);
 }
@@ -28,14 +28,14 @@ main {
 }
 .pause-window .pause-menu {
   padding: 25px;
-  background: #1F6C2A;
-  border: 3px solid #19902B;
+  background: #1f6c2a;
+  border: 3px solid #19902b;
   border-radius: 20px;
 }
 .pause-window .pause-menu > p {
   font-weight: 400;
   font-size: 4rem;
-  color: #FF7A00;
+  color: #ff7a00;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   margin-bottom: 50px;
@@ -47,12 +47,16 @@ main {
 
 section.game {
   display: grid;
-  width: 90%;
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
   padding-top: 10%;
   grid-template-columns: 2fr 7fr 2fr;
   grid-gap: 20px;
+}
+@media (max-width: 1440px) {
+  section.game {
+    width: 880px;
+  }
 }
 section.game .headline {
   background: #1F6C2A;
@@ -99,6 +103,11 @@ section.game .inner-window {
 section.game .instructions {
   text-align: center;
 }
+@media (max-width: 1440px) {
+  section.game .instructions {
+    display: none;
+  }
+}
 section.game .instructions .inner-window {
   padding-top: 30px;
 }
@@ -123,6 +132,14 @@ section.game .game-window {
   width: 100%;
   aspect-ratio: 3/2;
   background: #BBEAC2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1440px) {
+  section.game .scoreboard {
+    display: none;
+  }
 }
 section.game .scoreboard .user {
   width: 100%;
@@ -158,7 +175,7 @@ section.game .scoreboard .third-place {
   font-family: "Cherry Bomb One", "sans-serif";
 }
 .main-menu .headline {
-  background: #1F6C2A;
+  background: #1f6c2a;
   border-radius: 20px 20px 0px 0px;
   padding: 45px 30px;
   height: 60px;
@@ -173,7 +190,7 @@ section.game .scoreboard .third-place {
 .main-menu .headline > p {
   font-family: "Cherry Bomb One";
   font-size: 4rem;
-  background: linear-gradient(180deg, #FFBF85 40.13%, #FF7A00 52.52%);
+  background: linear-gradient(180deg, #ffbf85 40.13%, #ff7a00 52.52%);
   font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -196,6 +213,7 @@ section.game .scoreboard .third-place {
   border-radius: 0px 0px 20px 20px;
 }
 .main-menu .menu-content .btn-container {
+  position: relative;
   width: 300px;
   display: flex;
   justify-content: space-between;
@@ -216,7 +234,7 @@ section.game .scoreboard .third-place {
   left: -80px;
 }
 .main-menu .difficulty-popup {
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
   border-radius: 30px;
   padding: 10px;
@@ -240,23 +258,67 @@ section.game .scoreboard .third-place {
   margin-right: 90px;
   font-weight: 400;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.main-menu .difficulty-popup > div p, .main-menu .difficulty-popup > div span {
+.main-menu .difficulty-popup > div p,
+.main-menu .difficulty-popup > div span {
   display: flex;
   align-items: center;
 }
 .main-menu .difficulty-popup > div:hover, .main-menu .difficulty-popup > div:hover span {
-  color: #FF7A00;
+  color: #ff7a00;
   background-color: white;
   cursor: pointer;
+}
+.main-menu .options-popup {
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  padding: 10px;
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+.main-menu .options-popup form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+  min-width: 350px;
+}
+.main-menu .options-popup form label {
+  font-size: 1.4rem;
+}
+.main-menu .options-popup form select {
+  border: 0;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  padding: 7px 15px;
+  color: white;
+}
+.main-menu .options-popup .form-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-menu .options-popup .form-row:last-child {
+  margin-top: auto;
 }
 
 .pause-btn {
   width: 40px;
   height: 40px;
-  background-color: #E1720C;
+  background-color: #e1720c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: flex;
@@ -270,7 +332,7 @@ section.game .scoreboard .third-place {
 .pause-btn .white-bar {
   width: 5px;
   height: 16px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
   border-radius: 2px;
   margin: 2px;
@@ -294,19 +356,19 @@ section.game .scoreboard .third-place {
 }
 @keyframes shadowOnClick {
   0% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 0%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 0%), #e1720c;
   }
   25% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 5%, rgba(255, 255, 255, 0) 25%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 5%, rgba(255, 255, 255, 0) 25%), #e1720c;
   }
   50% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 8%, rgba(255, 255, 255, 0) 50%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 8%, rgba(255, 255, 255, 0) 50%), #e1720c;
   }
   75% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 15.78%, rgba(255, 255, 255, 0) 75%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 15.78%, rgba(255, 255, 255, 0) 75%), #e1720c;
   }
   100% {
-    background: radial-gradient(70% 70% at 50% 50%, #FFFFFF 15.78%, rgba(255, 255, 255, 0) 100%), #E1720C;
+    background: radial-gradient(70% 70% at 50% 50%, #ffffff 15.78%, rgba(255, 255, 255, 0) 100%), #e1720c;
   }
 }
 .pause-btn:hover {
@@ -335,11 +397,11 @@ section.game .scoreboard .third-place {
 }
 
 .blue-btn {
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
 }
 
 .orange-btn {
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #E1720C 0%, #ED9D53 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #e1720c 0%, #ed9d53 100%);
 }
 
 .square-btn {
@@ -350,7 +412,7 @@ section.game .scoreboard .third-place {
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
-  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898FF 0%, #4E8DF7 100%);
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
 }
 .square-btn i {
   font-size: 1.6rem;
@@ -359,6 +421,24 @@ section.game .scoreboard .third-place {
   font-size: 0.95rem;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.btn-validate {
+  width: 150px;
+  border: none;
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #25D33F 0%, #19902B 100%);
+  font-family: "Cherry Bomb One";
+  margin-bottom: 0;
+  font-size: 1.15rem;
+}
+
+.btn-cancel {
+  width: 150px;
+  border: none;
+  background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #F83C24 0%, #911010 100%);
+  font-family: "Cherry Bomb One";
+  margin-bottom: 0;
+  font-size: 1.15rem;
 }
 
 .key {

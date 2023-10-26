@@ -111,3 +111,22 @@
         text-transform: uppercase;
     }
 }
+
+.btn-validate {
+    width: 150px;
+    border: none;
+    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #25D33F 0%, #19902B 100%);
+    font-family: "Cherry Bomb One";
+    margin-bottom: 0;
+    font-size: 1.15rem;
+}
+
+.btn-cancel {
+    width: 150px;
+    border: none;
+    background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #F83C24 0%, #911010 100%);
+    font-family: "Cherry Bomb One";
+    margin-bottom: 0;
+    font-size: 1.15rem;
+}
+

@@ -50,6 +50,7 @@
         align-items: center;
         border-radius: 0px 0px 20px 20px;
         .btn-container {
+            position: relative;
             width: 300px;
             display: flex;
             justify-content: space-between;
@@ -113,6 +114,54 @@
                 background-color: white;
                 cursor: pointer;
             }
+        }
+    }
+
+    .options-popup {
+        background: radial-gradient(156.25% 701.25% at 33.18% 11.25%, #2898ff 0%, #4e8df7 100%);
+        box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+        border-radius: 30px;
+        padding: 10px;
+        position: absolute;
+        z-index: 11;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            min-height: 200px;
+            min-width: 350px;
+            label {
+                font-size: 1.4rem;
+            }
+
+            select{
+                border: 0;
+                border: 3px solid rgb(255, 255, 255);
+                border-radius: 25px;
+                background-color: rgba(255, 255, 255, 0);
+                color: black;
+                padding: 7px 15px;
+                color: white;
+            }
+        }
+
+        .form-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .form-row:last-child {
+            margin-top: auto;
         }
     }
 }
