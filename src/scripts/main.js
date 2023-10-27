@@ -2,7 +2,7 @@
 
 import { food } from './variables.js';
 import { createBoard } from "./board.js";
-import { drawFood, randomFoodPosition, createFood } from "./food.js"; // Ajoutez createFood ici
+import { drawFood, randomFoodPosition } from "./food.js"; // Ajoutez createFood ici
 import { createSnake, moveSnake } from "./snake.js";
 
 let movementKeys = {
