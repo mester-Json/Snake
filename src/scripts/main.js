@@ -1,87 +1,63 @@
 "use strict";
 
-<<<<<<< HEAD
-import { movementKeys, food } from './variables.js'
+import { food } from './variables.js';
 import { createBoard } from "./board.js";
 import { drawFood, randomFoodPosition } from "./food.js";
 import { createSnake, moveSnake } from "./snake.js";
-
-=======
-import { createBoard } from "./board.js";
-import { createFood } from "./food.js";
 
 let movementKeys = {
     top: "z",
     bottom: "s",
     left: "q",
     right: "d"
-}
->>>>>>> 20413d1c657eada8c3c2208d033d34bbc5a68583
+};
 
 const displayDifficultyPopup = () => {
     const popup = document.querySelector(".difficulty-popup");
     popup.classList.toggle("hidden");
-}
-
+};
 
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
-
     const pause = document.querySelector(".pause-window");
     const pauseBtn = document.querySelector(".pause-btn");
     pauseBtn.addEventListener("click", () => {
         pause.classList.toggle("hidden");
-    })
+    });
 
     const resumeBtn = document.querySelector(".resume-btn");
     resumeBtn.addEventListener("click", () => {
         pause.classList.toggle("hidden");
-    })
+    });
 
-=======
-    createBoard();
-    createFood();
->>>>>>> 20413d1c657eada8c3c2208d033d34bbc5a68583
-    document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup)
+    document.querySelector(".menu-content .difficulty-btn").addEventListener("click", displayDifficultyPopup);
 
-    window.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", (event) => {
         let key = event.key;
         if (key == movementKeys.top) moveSnake("up");
         if (key == movementKeys.bottom) moveSnake("down");
         if (key == movementKeys.left) moveSnake("left");
         if (key == movementKeys.right) moveSnake("right");
-    })
-
+    });
 
     const startButton = document.getElementById("start-button");
     const gameSection = document.querySelector(".game");
     const mainMenu = document.querySelector(".main-menu");
 
-
     startButton.addEventListener("click", function () {
         gameSection.classList.remove("hidden");
         mainMenu.classList.add("hidden");
-
-
+        startGame(); // Appeler startGame lorsque le bouton "Start" est pressé
     });
-
-})
-
-
-// Pas suprimer cette  function !!!!
+});
 
 function startGame() {
-
-
     createBoard();
     food.posX = randomFoodPosition("posX");
     food.posY = randomFoodPosition("posY");
-    console.log(food.posY)
+    console.log(food.posY);
     drawFood(food);
     createSnake();
 }
-startGame();
-
 
 function gameOver() {
     alert('GAME OVER');
@@ -94,4 +70,4 @@ function gameOver() {
     board_ctx.clearRect(0, 0, board_ctx.canvas.width, board_ctx.canvas.height);
 }
 
-export { gameOver }
+export { gameOver };
