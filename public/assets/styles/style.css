@@ -17,6 +17,7 @@ main {
 
 .pause-window {
   position: absolute;
+  z-index: 2;
   top: 0;
   font-family: "Cherry Bomb One", "sans-serif";
   width: 100vw;

@@ -15,7 +15,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/assets/styles/style.css">
     <link rel="shortcut icon" href="./public/assets/media/favicon.ico" type="image/x-icon">
-    <script src="./src/scripts/main.js" type="module"></script>
     <link rel="stylesheet" href="snake.css">
 </head>
 
@@ -163,7 +162,7 @@
                     <div class="headline-content">
                         <div class="current-score">
                             <span>Score</span>
-                            <span id="score-value">0</span>
+                            <span id="score">0</span>
                         </div>
                         <div class="current-difficulty">
                             <span>Difficulty</span>
@@ -191,7 +190,7 @@
                 <div class="headline">
                     <p>Scoreboard</p>
                 </div>
-                <div class="inner-window" id="high-score">
+                <div class="inner-window" id="scoreboard">
                     <div class="user first-place">
                         <p class="user-pseudo">Théo</p>
                         <p class="user-score">31215<span>pt</span></p>
@@ -224,6 +223,7 @@
             </div>
         </section>
     </main>
+    <script src="./src/scripts/main.js" type="module"></script>
 </body>
 
 </html>

@@ -1,9 +1,10 @@
 "use strict";
 
-import { food } from './variables.js';
+import { food, snake } from './variables.js';
 import { createBoard } from "./board.js";
 import { drawFood, randomFoodPosition } from "./food.js"; // Ajoutez createFood ici
-import { createSnake, moveSnake } from "./snake.js";
+import { moveSnake, createSnake } from "./snake.js";
+import { updateScore } from "./score.js";
 
 let movementKeys = {
     top: "z",
@@ -23,6 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pauseBtn.addEventListener("click", () => {
         pause.classList.toggle("hidden");
+
+        //     let gameRunning = true;
+        //     let gamePause = false;
+
+        //     if (gamePaused) {
+        //         clearInterval(gameInterval);
+        //     } else {
+        //         gameInterval = setInterval(() => {
+        //             moveSnake();
+        //         }, 100);
+        //     }
     });
 
     const resumeBtn = document.querySelector(".resume-btn");
@@ -35,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("keydown", (event) => {
         let key = event.key;
-        if (key == movementKeys.top) moveSnake("up");
-        if (key == movementKeys.bottom) moveSnake("down");
+        if (key == movementKeys.up) moveSnake("up");
+        if (key == movementKeys.down) moveSnake("down");
         if (key == movementKeys.left) moveSnake("left");
         if (key == movementKeys.right) moveSnake("right");
     });
@@ -53,15 +65,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function startGame() {
-    createBoard();
+    if (snake.gameInterval) clearInterval(snake.gameInterval);
     food.posX = randomFoodPosition("posX");
     food.posY = randomFoodPosition("posY");
-    console.log(food.posY);
-    drawFood(food);
+    drawFood();
+
+    snake.direction = 'right'; // Initialiser la direction du serpent
+    snake.size = 1;
+    snake.tail = [];
+    createBoard();
+    updateScore();
     createSnake();
+
+    snake.gameInterval = setInterval(() => {
+        moveSnake();
+    }, 100);
 }
 
 function gameOver() {
+    clearInterval(snake.gameInterval);
     alert('GAME OVER');
     const board = document.querySelector("#board");
     const board_ctx = board.getContext("2d");
@@ -70,6 +92,13 @@ function gameOver() {
     gameSection.classList.toggle("hidden");
     mainMenu.classList.toggle("hidden");
     board_ctx.clearRect(0, 0, board_ctx.canvas.width, board_ctx.canvas.height);
+    snake.posX = 0;
+    snake.posY = 0;
+    snake.size = 0;
+    snake.tail = [];
+
+
 }
 
-export { gameOver };
+
+export { gameOver }

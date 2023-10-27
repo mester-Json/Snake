@@ -1,11 +1,11 @@
 const cell = {
-    height: 34,
-    width: 34
+    height: 24,
+    width: 24
 }
 
 let movementKeys = {
-    top: "z",
-    bottom: "s",
+    up: "z",
+    down: "s",
     left: "q",
     right: "d"
 }
@@ -18,6 +18,7 @@ let food = {
 let snakeGame = {
     MAX_BOARD_WIDTH: 850,
     MAX_BOARD_HEIGHT: 550,
+    gameInterval: 100,
 }
 
 let snake = {

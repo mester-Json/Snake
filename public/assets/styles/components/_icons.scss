@@ -1,24 +1,24 @@
 .key {
     width: 40px;
     height: 40px;
-    background: #E1720C;
+    background: #e1720c;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    user-select: none
+    user-select: none;
 }
 
 .pause-key {
     position: relative;
-    &>div {
+    & > div {
         display: flex;
     }
     .white-bar {
         width: 5px;
         height: 16px;
-        background: #FFFFFF;
+        background: #ffffff;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
         border-radius: 2px;
         margin: 2px;
@@ -31,14 +31,13 @@
     }
 }
 
-
 .fa-star {
-    background: linear-gradient(180deg, #FFFFFF 1.14%, #ff9d00 80.09%);
+    background: linear-gradient(180deg, #ffffff 1.14%, #ff9d00 80.09%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    -webkit-text-stroke-width: 0.1px; 
-    -webkit-text-stroke-color: black; 
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
     text-shadow: rgba(255, 204, 0, 0.584) 1px 0 10px;
 }
