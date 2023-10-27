@@ -12,6 +12,14 @@
 
 ----------
 
+# Jour 3
+
+
+
+
+# Jour 4 
+
+
 ## Liens 
 
 > https://mester-json.github.io/Snake/
@@ -19,11 +27,11 @@
 
 ###  Ajout pour plus tard 
 
-- [ ]   Possibilité de changer la couleur.
-- [ ]   Possibilité de se connecter.
-- [ ]   Possibilité de changer la difficulté.
-- [ ]   Rendu responsive
-- [ ] 
-- [ ] 
+- [/]   Possibilité de changer la couleur.
+- [/]   Possibilité de se connecter.
+- [/]   Possibilité de changer la difficulté.
+- [/]   Rendu responsive
+- [/] 
+- [] 
 - [ ] 
 - [ ] 
